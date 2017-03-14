@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Task2
 {
-    class Game
+    class Game : Product
+        //public interface Game => zu viele probleme
     {
         private decimal gprice;
 
