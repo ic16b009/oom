@@ -34,6 +34,8 @@ namespace lesson3
             {
                 Console.WriteLine($"{x.Description.Truncate(50),-50} {x.GetPrice(currency),8:0.00} {currency}");
             }
+
         }
+        return 0;
     }
 }

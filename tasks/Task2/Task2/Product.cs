@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Task2
 {
-    public interface Product    //irgendwie sinnlos?
+    public interface Product   
     {
         string Name { get; }
+
 
     }
 }
