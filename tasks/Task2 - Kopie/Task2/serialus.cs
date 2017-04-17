@@ -3,12 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reactive.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Threading;
-using static System.Console;
-
 
 namespace Task2
 {
@@ -25,7 +21,7 @@ namespace Task2
             var settings = new JsonSerializerSettings() { Formatting = Formatting.Indented, TypeNameHandling = TypeNameHandling.Auto };
             Console.WriteLine(JsonConvert.SerializeObject(vgames, settings));
 
-            //Store - Serialize
+           //Store - Serialize
             var text = JsonConvert.SerializeObject(vgames, settings);
             var desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             var filename = Path.Combine(desktop, "gamelist.json");
@@ -34,9 +30,7 @@ namespace Task2
             //Print - Deserialize and print out
             var textFromFile = File.ReadAllText(filename);
             var itemsFromFile = JsonConvert.DeserializeObject<Game[]>(textFromFile, settings);
-
-
-           
+  
         }
     }
 }
